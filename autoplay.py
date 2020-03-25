@@ -17,12 +17,11 @@ def gen():
    print("gen done!")
 
 def output(out):
-   s="b'"
-   out = out.split(s)
-   out =[u[:-3] for u in out]
+   out =[u[2:-3] for u in out]
+   print(out)
 	
    o = open("out.txt","w")
-   [o.write(str(i)) for i in out if str(i) != '']
+   [o.write(str(i)) for i in out]
    o.close()
 
 def play(k=-1):
