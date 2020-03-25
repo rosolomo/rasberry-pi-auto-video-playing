@@ -17,7 +17,7 @@ def gen():
 def output(out):
 	
    o = open("out.txt","w")
-   [o.write(str(i)+",") for i in out]
+   o= [o.write(str(i)+",") for i in out]
    o.close()
    
 def play(k=-1):
