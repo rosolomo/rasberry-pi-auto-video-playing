@@ -20,7 +20,7 @@ def output(out):
    out =[u[:-3] for u in out]
 	
    o = open("out.txt","w")
-   [o.write(str(i)) for i in out if str(i) not '']
+   [o.write(str(i)) for i in out if str(i) != '']
    o.close()
 
 def play(k=-1):
