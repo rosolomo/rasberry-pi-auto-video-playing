@@ -15,19 +15,19 @@ def gen():
 
 def output(out):
 	
-   o = open("out.txt","w+")
-   [o.write(str(i)) for i in out]
+   o = open("out.txt",)
+   [o.write(str(i)+",") for i in out]
    o.close()
    
 def play(k=-1):
    f=open("out.txt","r")
-   urls=f.readlines()[2:-3]
+   urls=f.readlines()
    print(urls)
    print("-----------")
-   p="'"
+   urls=urls.split(",")
    print(urls)
    f.close()
-
+   p="'"
    if k==-1:
       for u in urls:
          os.system('omxplayer -o hdmi '+p+ str(u)+p )
