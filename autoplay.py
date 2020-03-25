@@ -9,7 +9,7 @@ def gen():
    f.close()
    out=[]
    for i in urls:
-      out.append(genOut(i))
+      out.append(genOut(str(i)))
 
 	
    print(out)
@@ -17,8 +17,9 @@ def gen():
    print("gen done!")
 
 def output(out):
-   out =[u for u in out]
+   out =[u[2:-3] for u in out]
    print(out)
+   print("_____")
 	
    o = open("out.txt","w")
    [o.write(str(i)) for i in out]
