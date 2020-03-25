@@ -18,9 +18,9 @@ def output(out):
 	
    o = open("out.txt","w")
    for i in out:
-		s=str(i)
-		print(s)
-		o.write(s)
+	s=str(i)
+	print(s)
+	o.write(s)
    o.close()
    
 def play(k=-1):
