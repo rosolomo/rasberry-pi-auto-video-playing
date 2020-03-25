@@ -17,7 +17,7 @@ def gen():
    print("gen done!")
 
 def output(out):
-   out =[u[2:-3] for u in out]
+   out =[u for u in out]
    print(out)
 	
    o = open("out.txt","w")
