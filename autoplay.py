@@ -10,6 +10,7 @@ def gen():
    out=[]
    for i in urls:
       out.append(genOut(str(i)))
+      print("out",out)
 
    print("gen done!")
 
