@@ -29,7 +29,7 @@ def play(k=-1):
    urls=f.read()
    print(urls)
    print("-----------")
-   urls=urls.split("\n")
+   urls=urls.split("\\n")
    print(urls)
    f.close()
    p="'"
