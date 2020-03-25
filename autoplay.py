@@ -11,10 +11,17 @@ def gen():
    for i in urls:
       out.append(genOut(i))
 
-   o = open("out.txt","w")
-   [o.write(str(i)) for i in out]
-   o.close()
+   output(out)
    print("gen done!")
+
+def output(out):
+   s="b'"
+   out = out.split(s)
+   out =[u[:-3] for u in out]
+	
+   o = open("out.txt","w")
+   [o.write(str(i)) for i in out if str(i) not '']
+   o.close()
 
 def play(k=-1):
    f=open("out.txt","r")
@@ -22,9 +29,6 @@ def play(k=-1):
    print(urls)
    print("-----------")
    p="'"
-   s="b'"
-   urls = urls.split(s)
-   urls =[u[:-3] for u in urls]
    print(urls)
    f.close()
 
@@ -56,10 +60,8 @@ def addlink(link):
 
    out=[]
    out.append(genOut(link))
+   output(out)
 
-   o = open("out.txt","a")
-   [o.write(str(i)) for i in out]
-   o.close()
    print("add done!")
 
 def genplay():
