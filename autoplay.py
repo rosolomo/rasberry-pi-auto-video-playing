@@ -11,20 +11,17 @@ def gen():
    for i in urls:
       out.append(genOut(str(i)))
 
-	
-   print(out)
-   output(out)
    print("gen done!")
 
 def output(out):
 	
-   o = open("out.txt","w")
+   o = open("out.txt","w+")
    [o.write(str(i)) for i in out]
    o.close()
-
+   
 def play(k=-1):
    f=open("out.txt","r")
-   urls=f.readlines()
+   urls=f.readlines()[2:-3]
    print(urls)
    print("-----------")
    p="'"
