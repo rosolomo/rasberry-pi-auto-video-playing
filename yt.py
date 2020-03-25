@@ -3,6 +3,7 @@ import subprocess
 
 f= open("links.txt","r")
 urls = f.readlines()
+urls = [i[:-1] for i in urls]
 print(urls)
 
 out=[]
@@ -12,8 +13,7 @@ for i in urls:
    (res,err) = yt.communicate()
    
    if res and not err:
-      print(res)
-   out.append(res)
+      out.append(res)
    
 o = ("out.txt","w")
 
