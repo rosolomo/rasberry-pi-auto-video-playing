@@ -21,7 +21,7 @@ def output(out):
    
 def play(k=-1):
    f=open("out.txt","r")
-   urls=f.readlines()
+   urls=f.read()
    print(urls)
    print("-----------")
    urls=urls.split(",")
