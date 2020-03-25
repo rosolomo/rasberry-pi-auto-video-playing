@@ -29,8 +29,10 @@ def play(k=-1):
    urls=f.read()
    print(urls)
    print("-----------")
-   urls=urls.split("\\n")
+   urls=urls.split("\\n'b'")
    print(urls)
+   urls[0]=urls[0][2:]
+   urls[-1]=urls[-1][:-3]
    f.close()
    p="'"
    if k==-1:
