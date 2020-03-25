@@ -11,6 +11,8 @@ def gen():
    for i in urls:
       out.append(genOut(i))
 
+	
+   print(out)
    output(out)
    print("gen done!")
 
