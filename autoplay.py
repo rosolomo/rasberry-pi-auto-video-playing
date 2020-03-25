@@ -17,9 +17,6 @@ def gen():
    print("gen done!")
 
 def output(out):
-   out =[u[2:-3] for u in out]
-   print(out)
-   print("_____")
 	
    o = open("out.txt","w")
    [o.write(str(i)) for i in out]
@@ -27,7 +24,7 @@ def output(out):
 
 def play(k=-1):
    f=open("out.txt","r")
-   urls=f.read()
+   urls=f.readlines()
    print(urls)
    print("-----------")
    p="'"
