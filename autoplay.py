@@ -27,13 +27,13 @@ def output(out):
 def play(k=-1):
    f=open("out.txt","r")
    urls=f.read()
-   print(urls)
+   #print(urls)
    print("-----------")
    urls=urls.split("\\n'b'")
-   print(urls)
+   #print(urls)
    urls[0]=urls[0][2:]
    urls[-1]=urls[-1][:-3]
-   print(urls)
+   #print(urls)
    f.close()
    p="'"
    if k==-1:
@@ -61,10 +61,15 @@ def genOut(link):
 def addlink(link):
    f= open("links.txt","a")
    f.write(str(link))
-
+   f.close()
    out=[]
    out.append(genOut(link))
-   output(out)
+	
+   o = open("out.txt","a")
+   for i in out:
+      s=str(i)
+      o.append(s)
+   o.close()
 
    print("add done!")
 
