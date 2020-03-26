@@ -65,7 +65,7 @@ def genOut(link):
 		 
 def addlink(link):
    f= open("newlinks.txt","a")
-   f.write(str(link))
+   f.write(str(link)+"\n")
    f.close()
    out=[]
    out.append(genOut(link))
