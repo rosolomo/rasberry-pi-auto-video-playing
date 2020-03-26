@@ -3,7 +3,8 @@ import subprocess
 
 def gen():
    f= open("links.txt","r")
-   urls = f.readlines()
+   g= open("newlinks.txt","r")
+   urls = f.readlines() + g.readlines()
    urls = [i[:-1] for i in urls]
    print(urls)
    f.close()
