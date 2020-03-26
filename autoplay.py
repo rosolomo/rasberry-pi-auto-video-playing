@@ -68,7 +68,7 @@ def addlink(link):
    o = open("out.txt","a")
    for i in out:
       s=str(i)
-      o.append(s)
+      o.write(s)
    o.close()
 
    print("add done!")
