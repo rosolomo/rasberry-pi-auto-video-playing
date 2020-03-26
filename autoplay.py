@@ -33,20 +33,22 @@ def play(k=-1):
    #print(urls)
    urls[0]=urls[0][2:]
    urls[-1]=urls[-1][:-3]
-   print(urls)
+   #print(urls)
    f.close()
    p="'"
 	
    k = int(k)
    if k==-1:
+      print(urls)
       for u in urls:
          os.system('omxplayer -o hdmi '+p+ str(u)+p )
    elif (k<len(urls)):
       os.system('omxplayer -o hdmi '+p+ urls[k]+p )
    else:
       print("nope")
+	
    print("play done!")
-
+   return urls
 
 def genOut(link):
 
