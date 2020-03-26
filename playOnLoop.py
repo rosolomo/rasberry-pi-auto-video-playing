@@ -6,7 +6,7 @@ g = open("newlinks.txt","r")
 numLinks = len(f.readlines()) + len((g.readlines))
 print("Num Vids")
 n = input("how many vids do u want to play: ")
-l = input("how many times do you want to loop: "
+l = input("how many times do you want to loop: ")
 
 vids=[]
 print("enter vid numbers")
