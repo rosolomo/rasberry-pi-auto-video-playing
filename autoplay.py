@@ -1,9 +1,11 @@
 import sys, os
 import subprocess
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dirp = str(dir_path)
 def gen():
-   f= open("links.txt","r")
-   g= open("newlinks.txt","r")
+   f= open(dirp+"links.txt","r")
+   g= open(dirp+"newlinks.txt","r")
    urls = f.readlines() + g.readlines()
    urls = [i[:-1] for i in urls]
    print(urls)
@@ -18,7 +20,7 @@ def gen():
 
 def output(out):
 	
-   o = open("out.txt","w")
+   o = open(dirp+"out.txt","w")
    for i in out:
       s=str(i)
       print(s)
@@ -26,7 +28,7 @@ def output(out):
    o.close()
    
 def play(k=-1):
-   f=open("out.txt","r")
+   f=open(dirp+"out.txt","r")
    urls=f.read()
    #print(urls)
    print("-----------")
@@ -65,13 +67,13 @@ def genOut(link):
          return res
 		 
 def addlink(link):
-   f= open("newlinks.txt","a")
+   f= open(dirp+"newlinks.txt","a")
    f.write(str(link)+"\n")
    f.close()
    out=[]
    out.append(genOut(link))
 	
-   o = open("out.txt","a")
+   o = open(dirp+"out.txt","a")
    for i in out:
       s=str(i)
       o.write(s)
