@@ -33,7 +33,7 @@ def play(k=-1):
    #print(urls)
    urls[0]=urls[0][2:]
    urls[-1]=urls[-1][:-3]
-   #print(urls)
+   print(urls)
    f.close()
    p="'"
    if k==-1:
