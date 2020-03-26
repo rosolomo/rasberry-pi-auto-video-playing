@@ -59,7 +59,7 @@ def genOut(link):
          return res
 		 
 def addlink(link):
-   f= open("links.txt","a")
+   f= open("newlinks.txt","w")
    f.write(str(link))
    f.close()
    out=[]
