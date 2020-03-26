@@ -43,7 +43,9 @@ def play(k=-1):
    k = int(k)
    if k==-1:
       print(urls)
+      print()
       for u in urls:
+	 print(u)
          os.system('omxplayer -o hdmi '+p+ str(u)+p )
    elif (k<len(urls)):
       print(urls[k])
