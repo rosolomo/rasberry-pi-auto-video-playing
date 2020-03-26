@@ -2,7 +2,7 @@ import sys, os
 import subprocess
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-dirp = str(dir_path)
+dirp = str(dir_path)+"/"
 def gen():
    f= open(dirp+"links.txt","r")
    g= open(dirp+"newlinks.txt","r")
