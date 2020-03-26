@@ -1,3 +1,3 @@
-from autoplay.py import genplay
+from autoplay import genplay
 
 genplay()
